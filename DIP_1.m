@@ -22,17 +22,20 @@ imshow(bw1);
 title('Logical at 90% threshold');
 
 % Grayscale
+
 gray = rgb2gray(orig);
 subplot(3,3,4);
 imshow(gray);
 title('Grayscale');
 
 % Histogram
+
 subplot(3,3,5);
 imhist(gray);
 title('Histogram of grayscale');
 
 % Histogram sliding
+
 gSlide = gray-100;
 subplot(3,3,6);
 imhist(gSlide);
@@ -42,6 +45,7 @@ imshow(gSlide);
 title('Grayscale after sliding by 100');
 
 % Histogram equalization
+
 [eq,T] = histeq(gray);
 subplot(3,3,8);
 imhist(orig);
